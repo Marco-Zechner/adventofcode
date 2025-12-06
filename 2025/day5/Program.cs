@@ -1,4 +1,5 @@
-﻿var input = File.ReadAllText("../../../data.txt");
+﻿var path = Path.Combine(AppContext.BaseDirectory, "data", "data.txt");
+var input = File.ReadAllText(path);
 input = input.Replace("\r", ""); // Normalize line endings for Windows
 
 var ranges = input.Split("\n\n")[0]
